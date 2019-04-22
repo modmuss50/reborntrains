@@ -21,7 +21,8 @@
     "main": [
       "me.modmuss50.trains.Mod::init",
       "me.modmuss50.trains.sounds.TrainSounds::init",
-      "me.modmuss50.trains.ModPackets::init"
+      "me.modmuss50.trains.ModPackets::init",
+      "me.modmuss50.trains.train.TrainManager::init"
     ]
   },
   "mixins": [

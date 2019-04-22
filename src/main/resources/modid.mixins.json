@@ -3,7 +3,8 @@
   "package": "me.modmuss50.trains.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "ClientPlayNetworkHandlerMixin"
+    "ClientPlayNetworkHandlerMixin",
+    "AbstractMinecartEntityMixin"
   ],
   "client": [
   ],

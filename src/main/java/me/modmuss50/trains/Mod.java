@@ -11,6 +11,7 @@ import net.fabricmc.fabric.api.client.render.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.screen.ScreenProviderRegistry;
 import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
 import net.fabricmc.fabric.api.entity.FabricEntityTypeBuilder;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityCategory;
 import net.minecraft.entity.EntitySize;
 import net.minecraft.entity.EntityType;
@@ -19,6 +20,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.World;
 
 public class Mod {
 
@@ -30,7 +32,12 @@ public class Mod {
 	@SuppressWarnings("unused")
 	public static void init() {
 		locomotiveEntityType = Registry.register(Registry.ENTITY_TYPE, new Identifier("reborntrains", "locomotive"),
-		                                         FabricEntityTypeBuilder.create(EntityCategory.MISC, (EntityType.EntityFactory<LocomotiveEntity>) LocomotiveEntity::new).size(new EntitySize(1, 1, true)).trackable(64, 1, true).build());
+		                                         FabricEntityTypeBuilder.create(EntityCategory.MISC, (EntityType.EntityFactory<LocomotiveEntity>) LocomotiveEntity::new)
+			                                         .size(new EntitySize(1, 1, true))
+			                                         .trackable(64, 1, true)
+			                                         .build());
+
+
 
 		EntityRendererRegistry.INSTANCE.register(LocomotiveEntity.class, (entityRenderDispatcher, context) -> new LocomotiveRender(entityRenderDispatcher));
 

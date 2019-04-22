@@ -5,7 +5,7 @@ public enum LocomotiveSpeed {
 	SLOW(0.01D),
 	FAST(0.06D);
 
-	double speed;
+	public double speed;
 
 	LocomotiveSpeed(double speed) {
 		this.speed = speed;

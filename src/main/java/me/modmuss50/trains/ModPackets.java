@@ -13,7 +13,7 @@ public class ModPackets {
 			int entityID = packetByteBuf.readInt();
 			packetContext.getTaskQueue().execute(() -> {
 				LocomotiveEntity entity = (LocomotiveEntity) packetContext.getPlayer().world.getEntityById(entityID);
-				entity.setSpeed(speed);
+				entity.setTargetSpeed(speed);
 			});
 		});
 	}

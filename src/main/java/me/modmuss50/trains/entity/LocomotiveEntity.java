@@ -113,8 +113,12 @@ public class LocomotiveEntity extends AbstractMinecartEntity {
 		return false; //Nope
 	}
 
-	public void setSpeed(LocomotiveSpeed speed) {
+	public void setTargetSpeed(LocomotiveSpeed speed) {
 		dataTracker.set(TARGET_SPEED, speed.speed);
+	}
+
+	public double getTargetSpeed(){
+		return dataTracker.get(TARGET_SPEED);
 	}
 
 	@Override
