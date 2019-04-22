@@ -1,0 +1,23 @@
+{
+  "move": {
+    "category": "entity",
+    "sounds": [
+      {
+        "name": "reborntrains:move",
+        "volume": 0.2
+      }
+    ]
+  },
+  "horn": {
+    "category": "entity",
+    "sounds": [
+      "reborntrains:horn"
+    ]
+  },
+  "clank": {
+    "category": "block",
+    "sounds": [
+      "reborntrains:clank"
+    ]
+  }
+}
